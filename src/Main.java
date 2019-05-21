@@ -14,6 +14,10 @@ import structural.bridge.AbstractRole;
 import structural.bridge.ConcreteImplementorA;
 import structural.bridge.Implementor;
 import structural.bridge.RoleA;
+import structural.decorator.Component;
+import structural.decorator.ConcreteComponent;
+import structural.decorator.ConcreteDecorator;
+import structural.decorator.Decorator;
 import structural.proxy.ChinnessNetwork;
 import structural.proxy.Net;
 import structural.proxy.WorldNetwork;
@@ -61,5 +65,11 @@ public class Main {
         Implementor a = new ConcreteImplementorA();
         AbstractRole role = new RoleA(a);
         role.operation();
+
+        // Decorator
+        Component c = new ConcreteComponent();
+        c.operation();
+        Decorator decorator = new ConcreteDecorator(c);
+        decorator.operation();
     }
 }
