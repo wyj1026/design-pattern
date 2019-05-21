@@ -14,10 +14,13 @@ import structural.bridge.AbstractRole;
 import structural.bridge.ConcreteImplementorA;
 import structural.bridge.Implementor;
 import structural.bridge.RoleA;
+import structural.composite.Engineer;
+import structural.composite.Leader;
 import structural.decorator.Component;
 import structural.decorator.ConcreteComponent;
 import structural.decorator.ConcreteDecorator;
 import structural.decorator.Decorator;
+import structural.facade.Facade;
 import structural.proxy.ChinnessNetwork;
 import structural.proxy.Net;
 import structural.proxy.WorldNetwork;
@@ -71,5 +74,17 @@ public class Main {
         c.operation();
         Decorator decorator = new ConcreteDecorator(c);
         decorator.operation();
+
+        // Facade
+        Facade f = new Facade();
+        f.method();
+
+        // Composite
+        Leader l1 = new Leader("A");
+        Leader l2 = new Leader("B");
+        l1.add(l2);
+        l2.add(new Engineer("W1"));
+        l2.add(new Engineer("W2"));
+        l1.display(0);
     }
 }
