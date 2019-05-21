@@ -21,6 +21,7 @@ import structural.decorator.ConcreteComponent;
 import structural.decorator.ConcreteDecorator;
 import structural.decorator.Decorator;
 import structural.facade.Facade;
+import structural.flyweight.FlyweightFactory;
 import structural.proxy.ChinnessNetwork;
 import structural.proxy.Net;
 import structural.proxy.WorldNetwork;
@@ -86,5 +87,11 @@ public class Main {
         l2.add(new Engineer("W1"));
         l2.add(new Engineer("W2"));
         l1.display(0);
+
+        // Flyweight
+        FlyweightFactory factory = new FlyweightFactory();
+        factory.getFlyWeight("a").operation();
+        factory.getFlyWeight("b").operation();
+        factory.getFlyWeight("a").operation();
     }
 }
