@@ -10,6 +10,10 @@ import creational.prototype.Prototype;
 import creational.singleton.Singleton;
 import structural.adapter.Adapter;
 import structural.adapter.Target;
+import structural.bridge.AbstractRole;
+import structural.bridge.ConcreteImplementorA;
+import structural.bridge.Implementor;
+import structural.bridge.RoleA;
 import structural.proxy.ChinnessNetwork;
 import structural.proxy.Net;
 import structural.proxy.WorldNetwork;
@@ -52,5 +56,10 @@ public class Main {
         // Adapter
         Target t = new Adapter();
         t.request();
+
+        // Bridge
+        Implementor a = new ConcreteImplementorA();
+        AbstractRole role = new RoleA(a);
+        role.operation();
     }
 }
