@@ -3,6 +3,7 @@ import behavioral.abstractfactory.IosFactory;
 import behavioral.abstractfactory.SystemFactory;
 import behavioral.factory.JpgReaderFactory;
 import behavioral.factory.ReaderFactory;
+import behavioral.singleton.Singleton;
 
 public class Main {
 
@@ -18,5 +19,8 @@ public class Main {
         systemFactory = new AndroidFactory();
         systemFactory.createOperationController().control();
         systemFactory.createInterfaceController().display();
+
+        // Singleton
+        Singleton.getInstance().sayHi();
     }
 }
