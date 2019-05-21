@@ -1,4 +1,4 @@
-package behavioral.factory;
+package creational.factory;
 
 public class PngReaderFactory implements ReaderFactory {
     @Override

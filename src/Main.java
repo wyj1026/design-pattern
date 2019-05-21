@@ -1,13 +1,13 @@
-import behavioral.abstractfactory.AndroidFactory;
-import behavioral.abstractfactory.IosFactory;
-import behavioral.abstractfactory.SystemFactory;
-import behavioral.builder.Builder;
-import behavioral.builder.BuilderA;
-import behavioral.builder.Director;
-import behavioral.factory.JpgReaderFactory;
-import behavioral.factory.ReaderFactory;
-import behavioral.prototype.Prototype;
-import behavioral.singleton.Singleton;
+import creational.abstractfactory.AndroidFactory;
+import creational.abstractfactory.IosFactory;
+import creational.abstractfactory.SystemFactory;
+import creational.builder.Builder;
+import creational.builder.BuilderA;
+import creational.builder.Director;
+import creational.factory.JpgReaderFactory;
+import creational.factory.ReaderFactory;
+import creational.prototype.Prototype;
+import creational.singleton.Singleton;
 
 public class Main {
 

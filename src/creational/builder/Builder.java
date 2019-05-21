@@ -1,4 +1,4 @@
-package behavioral.builder;
+package creational.builder;
 
 public interface Builder {
     void buildPart1();

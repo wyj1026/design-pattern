@@ -1,4 +1,4 @@
-package behavioral.factory;
+package creational.factory;
 
 public class JpgReader implements Reader{
     @Override

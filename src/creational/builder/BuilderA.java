@@ -1,4 +1,4 @@
-package behavioral.builder;
+package creational.builder;
 
 public class BuilderA implements Builder {
     private Production production = new Production();

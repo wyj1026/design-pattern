@@ -1,4 +1,4 @@
-package behavioral.abstractfactory;
+package creational.abstractfactory;
 
 public class IosUiController implements UiController{
     @Override

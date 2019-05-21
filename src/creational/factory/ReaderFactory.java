@@ -1,4 +1,4 @@
-package behavioral.factory;
+package creational.factory;
 
 public interface ReaderFactory {
     Reader getReader();

@@ -1,4 +1,4 @@
-package behavioral.prototype;
+package creational.prototype;
 
 public class Prototype implements Cloneable {
     private int value;
