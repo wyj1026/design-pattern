@@ -6,6 +6,7 @@ import behavioral.builder.BuilderA;
 import behavioral.builder.Director;
 import behavioral.factory.JpgReaderFactory;
 import behavioral.factory.ReaderFactory;
+import behavioral.prototype.Prototype;
 import behavioral.singleton.Singleton;
 
 public class Main {
@@ -30,5 +31,12 @@ public class Main {
         Builder builder = new BuilderA();
         Director director = new Director(builder);
         director.construct().print();
+
+        // Prototype
+        Prototype p = new Prototype(100);
+        try {
+            p.clone().print();
+        }
+        catch (Exception e) {}
     }
 }
