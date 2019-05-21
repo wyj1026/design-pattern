@@ -8,6 +8,9 @@ import creational.factory.JpgReaderFactory;
 import creational.factory.ReaderFactory;
 import creational.prototype.Prototype;
 import creational.singleton.Singleton;
+import structural.proxy.ChinnessNetwork;
+import structural.proxy.Net;
+import structural.proxy.WorldNetwork;
 
 public class Main {
 
@@ -38,5 +41,10 @@ public class Main {
             p.clone().print();
         }
         catch (Exception e) {}
+
+        // Proxy
+        Net net = new ChinnessNetwork(new WorldNetwork());
+        net.access("www.google.com");
+        net.access("www.abc.com");
     }
 }
