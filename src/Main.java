@@ -4,6 +4,7 @@ import behavioral.chain.Handler;
 import behavioral.command.Command;
 import behavioral.command.ConcreteCommand;
 import behavioral.command.Invoker;
+import behavioral.state.ConcreteStateA;
 import behavioral.strategy.ConcreteStrategyA;
 import behavioral.strategy.ConcreteStrategyB;
 import behavioral.strategy.Context;
@@ -128,5 +129,12 @@ public class Main {
         h1.handleRequest("one");
         h1.handleRequest("t");
         h1.handleRequest("two");
+
+        // State
+        behavioral.state.Context context1 = new behavioral.state.Context();
+        context1.setState(new ConcreteStateA());
+        context1.handle();
+        context1.handle();
+        context1.handle();
     }
 }
