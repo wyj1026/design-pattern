@@ -4,6 +4,7 @@ import behavioral.chain.Handler;
 import behavioral.command.Command;
 import behavioral.command.ConcreteCommand;
 import behavioral.command.Invoker;
+import behavioral.mediator.*;
 import behavioral.observer.ConcreteObserver1;
 import behavioral.observer.ConcreteObserver2;
 import behavioral.observer.ConcreteSubject;
@@ -145,5 +146,14 @@ public class Main {
         subject.add(new ConcreteObserver1());
         subject.add(new ConcreteObserver2());
         subject.notifyAllObservers();
+
+        // Mediator
+        Mediator mediator = new ConcreteMediator();
+        Colleague c1 = new ConcreteColleague1();
+        Colleague c2 = new ConcreteColleague2();
+        mediator.register(c1);
+        mediator.register(c2);
+        c1.send();
+        c2.send();
     }
 }
