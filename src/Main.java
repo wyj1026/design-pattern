@@ -1,3 +1,5 @@
+import behavioral.template.AbstractClass;
+import behavioral.template.ConcreteClass;
 import creational.abstractfactory.AndroidFactory;
 import creational.abstractfactory.IosFactory;
 import creational.abstractfactory.SystemFactory;
@@ -93,5 +95,9 @@ public class Main {
         factory.getFlyWeight("a").operation();
         factory.getFlyWeight("b").operation();
         factory.getFlyWeight("a").operation();
+
+        // Template method
+        AbstractClass aa = new ConcreteClass();
+        aa.templateMethod();
     }
 }
