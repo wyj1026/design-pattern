@@ -4,6 +4,9 @@ import behavioral.chain.Handler;
 import behavioral.command.Command;
 import behavioral.command.ConcreteCommand;
 import behavioral.command.Invoker;
+import behavioral.observer.ConcreteObserver1;
+import behavioral.observer.ConcreteObserver2;
+import behavioral.observer.ConcreteSubject;
 import behavioral.state.ConcreteStateA;
 import behavioral.strategy.ConcreteStrategyA;
 import behavioral.strategy.ConcreteStrategyB;
@@ -136,5 +139,11 @@ public class Main {
         context1.handle();
         context1.handle();
         context1.handle();
+
+        // Observer
+        ConcreteSubject subject = new ConcreteSubject();
+        subject.add(new ConcreteObserver1());
+        subject.add(new ConcreteObserver2());
+        subject.notifyAllObservers();
     }
 }
