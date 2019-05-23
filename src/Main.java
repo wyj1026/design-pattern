@@ -1,3 +1,6 @@
+import behavioral.strategy.ConcreteStrategyA;
+import behavioral.strategy.ConcreteStrategyB;
+import behavioral.strategy.Context;
 import behavioral.template.AbstractClass;
 import behavioral.template.ConcreteClass;
 import creational.abstractfactory.AndroidFactory;
@@ -99,5 +102,12 @@ public class Main {
         // Template method
         AbstractClass aa = new ConcreteClass();
         aa.templateMethod();
+
+        // Strategy
+        Context context = new Context();
+        context.setStrategy(new ConcreteStrategyA());
+        context.strategyMethod();
+        context.setStrategy(new ConcreteStrategyB());
+        context.strategyMethod();
     }
 }
