@@ -14,6 +14,7 @@ import behavioral.strategy.ConcreteStrategyB;
 import behavioral.strategy.Context;
 import behavioral.template.AbstractClass;
 import behavioral.template.ConcreteClass;
+import behavioral.visitor.*;
 import creational.abstractfactory.AndroidFactory;
 import creational.abstractfactory.IosFactory;
 import creational.abstractfactory.SystemFactory;
@@ -155,5 +156,12 @@ public class Main {
         mediator.register(c2);
         c1.send();
         c2.send();
+
+        // Visitor
+        Structure s = new Structure();
+        s.add(new ConcreteElementA());
+        s.add(new ConcreteElementB());
+        s.accept(new ConcreteVisitorA());
+        s.accept(new ConcreteVisitorB());
     }
 }
