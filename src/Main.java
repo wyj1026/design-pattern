@@ -5,6 +5,8 @@ import behavioral.command.Command;
 import behavioral.command.ConcreteCommand;
 import behavioral.command.Invoker;
 import behavioral.mediator.*;
+import behavioral.memento.Origintor;
+import behavioral.memento.Taker;
 import behavioral.observer.ConcreteObserver1;
 import behavioral.observer.ConcreteObserver2;
 import behavioral.observer.ConcreteSubject;
@@ -163,5 +165,16 @@ public class Main {
         s.add(new ConcreteElementB());
         s.accept(new ConcreteVisitorA());
         s.accept(new ConcreteVisitorB());
+
+        // Memento
+        Origintor origintor = new Origintor();
+        Taker taker = new Taker();
+        origintor.setState("0");
+        origintor.print();
+        taker.setMemento(origintor.create());
+        origintor.setState("1");
+        origintor.print();
+        origintor.restore(taker.getMemento());
+        origintor.print();
     }
 }
