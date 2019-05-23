@@ -1,3 +1,6 @@
+import behavioral.command.Command;
+import behavioral.command.ConcreteCommand;
+import behavioral.command.Invoker;
 import behavioral.strategy.ConcreteStrategyA;
 import behavioral.strategy.ConcreteStrategyB;
 import behavioral.strategy.Context;
@@ -109,5 +112,10 @@ public class Main {
         context.strategyMethod();
         context.setStrategy(new ConcreteStrategyB());
         context.strategyMethod();
+
+        // Command
+        Command cmd  = new ConcreteCommand();
+        Invoker invoker = new Invoker(cmd);
+        invoker.call();
     }
 }
