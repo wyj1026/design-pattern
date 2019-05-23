@@ -1,3 +1,6 @@
+import behavioral.chain.ConcreteHandler1;
+import behavioral.chain.ConcreteHandler2;
+import behavioral.chain.Handler;
 import behavioral.command.Command;
 import behavioral.command.ConcreteCommand;
 import behavioral.command.Invoker;
@@ -117,5 +120,13 @@ public class Main {
         Command cmd  = new ConcreteCommand();
         Invoker invoker = new Invoker(cmd);
         invoker.call();
+
+        // Chain
+        Handler h1 = new ConcreteHandler1();
+        Handler h2 = new ConcreteHandler2();
+        h1.setNext(h2);
+        h1.handleRequest("one");
+        h1.handleRequest("t");
+        h1.handleRequest("two");
     }
 }
